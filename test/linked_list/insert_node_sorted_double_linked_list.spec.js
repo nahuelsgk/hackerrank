@@ -2,7 +2,7 @@ const {DoublyLinkedList, DoublyLinkedListNode, printDoublyLinkedList, toArray} =
 const {expect} = require('chai');
 
 sortedInsert = (head, data) => {
-    sortedInsert_v1(head, data);
+    return sortedInsert_v1(head, data);
 }
 
 sortedInsert_v1 = (head, data) => {
@@ -37,7 +37,9 @@ describe('into a sorted list', function () {
         llist.insertNode('3');
         llist.insertNode('5');
         llist.insertNode('10');
-        expect(toArray(sortedInsert(llist.head, 4))).to.be.eql(['1','3','4','5','10']);
+        let sorted = sortedInsert(llist.head, 4);
+        let array = toArray(sorted);
+        expect(array).to.be.eql(['1','3','4','5','10']);
     });
     it('should work at the beginning', function () {
         let llist = new DoublyLinkedList();
