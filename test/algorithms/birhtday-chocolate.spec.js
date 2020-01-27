@@ -14,7 +14,7 @@ const birthday = (s, d, m) => {
     return result
 }
 
-//@TODO: Se puede mejorar con coste lineal
+//@TODO: Se puede mejorar con coste lineal: se hace un recorrido lineal y solo se resta el primero y se suma el nuevo elemento.
 
 describe('chocolate birthday', function () {
     it("should find all possible segments that match month's length with the sum's day", function () {
